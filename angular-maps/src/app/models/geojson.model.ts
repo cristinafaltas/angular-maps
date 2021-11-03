@@ -4,15 +4,14 @@ export class Geometry {
 }
 
 export class GeoJson {
-        public type: string;
-        public geometry: Geometry;
-        public properties?: any
+    public type: string;
+    public geometry: Geometry;
+    public properties?: any
 }
 
-export class GeoFeatureCollection
-{
+export class GeoFeatureCollection {
     public type: string;
-    public features : GeoJson[];
+    public features: GeoJson[];
 }
 
 

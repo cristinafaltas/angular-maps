@@ -33,9 +33,9 @@ export class AppComponent {
   }
 
   styleFunc = (feature: any) => {
-    console.log(feature.i.id)
+    console.log(feature)
     let newColor = "#FF0000"; //RED
-    if (feature.i.id == 0) newColor = "#00FF00"; //GREEN
+    if (feature.h.id == 0) newColor = "#00FF00"; //GREEN
     else newColor = "#0000FF"; //BLUE
     return ({
       clickable: false,

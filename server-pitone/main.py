@@ -36,6 +36,17 @@ def get_vettore():
         output.append(s['CI_VETTORE'])
     return jsonify({'result': output})
     
+@app.route('/ci_vettore/<foglio>', methods=['GET'])
+def get_vettore2(foglio):
+    mil4326WKT = mongo.db.MilWKT4326
+    output = []
+    query = {
+        "FOGLIO" : foglio
+    }
+    for s in mil4326WKT.find(query).limit(100):
+        output.append(s['CI_VETTORE'])
+    return jsonify({'result': output})
+
 # Checks to see if the name of the package is the run as the main package.
 if __name__ == "__main__":
     # Runs the Flask application only if the main.py file is being run.
